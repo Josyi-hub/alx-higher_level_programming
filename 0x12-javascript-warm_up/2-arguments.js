@@ -5,5 +5,5 @@ if (argvLength === 2) {
 } else if (argvLength === 3) {
     console.log('Argument found');
 } else {
-    console.log('Argument found');
+    console.log('Arguments found');
 }
