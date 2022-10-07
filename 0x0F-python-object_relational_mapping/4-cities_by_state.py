@@ -13,7 +13,9 @@ else:
     conn = MySQLdb.connect(host="localhost", port=3306, user=username,
                            passwd="root", db=dbname, charset="utf8")
     cur = conn.cursor()
-    cur.execute("SELECT cities.id, cities.name, states.name FROM cities, states where cities.state_id=states.id ORDER BY id ASC")
+    comm = "SELECT cities.id, cities.name, states.name FROM cities, states wh\
+ere cities.state_id=states.id ORDER BY id ASC"
+    cur.execute(comm)
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
