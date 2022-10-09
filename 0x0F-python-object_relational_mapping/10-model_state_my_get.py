@@ -17,8 +17,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=eng)
     session = Session()
     state = session.query(State).filter_by(name=argv[4]).first()
-    if !state:
-        print("Not found")
-    else:
+    if state is not None:
         print(str(state.id))
+    else:
+        print("Not found")
     session.close()
