@@ -10,7 +10,8 @@ else:
                            passwd=argv[2], db=argv[3], charset="utf8")
     cur = conn.cursor()
     query1 = f"SELECT id FROM states WHERE name LIKE '{argv[4]}'"
-    query = f"SELECT name FROM cities where state_id=({query1}) ORDER BY id ASC"
+    query = f"SELECT name FROM cities where state_id=({query1}) \
+    ORDER BY id ASC"
     cur.execute(query)
     rows = cur.fetchall()
     print(", ".join(city[0] for city in rows))
