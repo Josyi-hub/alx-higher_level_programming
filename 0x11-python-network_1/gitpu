@@ -3,4 +3,4 @@ rm *~* *#*;
 chmod u+x "$1";
 git add .;
 git commit -m "Add $1";
-git push https://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@github.com/Josyi-hub/alx-higher_level_programming.git;
+git push https://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@github.com/Josyi-hub/alx-higher_level_programming.git
