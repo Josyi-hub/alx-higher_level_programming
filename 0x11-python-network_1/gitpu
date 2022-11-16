@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+rm *~* *#*;
+chmod u+x "$1";
+git add .;
+git commit -m "Add $1";
+git push https://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@github.com/Josyi-hub/alx-higher_level_programming.git
